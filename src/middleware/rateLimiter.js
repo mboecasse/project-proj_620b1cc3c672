@@ -103,7 +103,7 @@ const apiLimiter = rateLimit({
       ip: ip,
       path: req.path,
       method: req.method,
-      userId: req.user?.id,
+      userId: req.user.id,
       apiKey: req.headers['x-api-key'] ? 'present' : 'none'
     });
 
