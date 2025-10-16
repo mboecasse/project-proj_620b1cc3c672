@@ -1,0 +1,73 @@
+{
+  "name": "project-proj_620b1cc3c672",
+  "version": "1.0.0",
+  "description": "Simple REST API for managing books. Include endpoints for CRUD operations on books (GET, POST, PUT, DELETE). Each book has title, author, ISBN, and publishedDate fields. Use Express.js for the server ",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "start:prod": "NODE_ENV=production node src/server.js",
+    "dev": "NODE_ENV=development nodemon src/server.js",
+    "test": "NODE_ENV=test jest --coverage --detectOpenHandles",
+    "test:watch": "NODE_ENV=test jest --watch",
+    "test:unit": "NODE_ENV=test jest tests/unit --coverage",
+    "test:integration": "NODE_ENV=test jest tests/integration --coverage",
+    "lint": "eslint src/**/*.js tests/**/*.js",
+    "lint:fix": "eslint src/**/*.js tests/**/*.js --fix",
+    "format": "prettier --write \"src/**/*.js\" \"tests/**/*.js\"",
+    "validate": "npm run lint && npm run test",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "api",
+    "database",
+    "express",
+    "mongodb",
+    "nodejs",
+    "rest"
+  ],
+  "author": "Genesis Platform <hello@genesis.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "hpp": "^0.2.3",
+    "xss-clean": "^0.1.4",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^7.1.5",
+    "morgan": "^1.10.0",
+    "winston": "^3.11.0",
+    "compression": "^1.7.4",
+    "express-validator": "^7.0.1",
+    "joi": "^17.11.0",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.7.0",
+    "jsonwebtoken": "^1.0.0",
+    "bcrypt": "^1.0.0",
+    "axios": "^1.6.5"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "@types/jest": "^29.5.11",
+    "mongodb-memory-server": "^10.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
+    "nodemon": "^3.0.2",
+    "@shelf/jest-mongodb": "^4.1.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mboecasse/project-proj_620b1cc3c672.git"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
